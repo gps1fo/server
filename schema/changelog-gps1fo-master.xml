@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Index d'inclusions de GPS 1fo (ADR-0002).
+
+  C'est ce fichier que le serveur exécute : toutes nos configurations fixent
+  database.changelog à ./schema/changelog-gps1fo-master.xml. Il inclut d'abord l'index amont,
+  puis nos changelogs dans l'ordre de leur numéro.
+
+  Il ne contient QUE des <include>, jamais de changeset : il n'est pas scellé — l'amont
+  complète le sien à chaque version — et un changeset glissé ici échapperait donc au contrôle
+  d'immuabilité (scripts/check-migrations.sh, règle 5).
+-->
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <include file="changelog-master.xml" relativeToChangelogFile="true" />
+
+  <!-- Nos changesets : changelog-gps1fo-NN.xml, par numéro croissant. Aucun pour l'instant. -->
+
+</databaseChangeLog>

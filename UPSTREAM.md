@@ -3,7 +3,7 @@
 - **Dépôt amont** : `https://github.com/traccar/traccar`
 - **Tag amont courant** : `v6.15.3`
 - **Date du dernier sync** : `AAAA-MM-JJ`
-- **Stratégie d'intégration** : `rebase`  ← décision stable, ne pas changer au cas par cas
+- **Stratégie d'intégration** : `merge`  ← décision stable, ne pas changer au cas par cas
 - **Écart toléré** : 2 versions mineures maximum
 
 ## Conflits récurrents et résolution habituelle
